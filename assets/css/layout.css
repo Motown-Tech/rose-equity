@@ -78,7 +78,11 @@
 		max-width: 100%; 	/* 1 */
 	}
 	
-	#logo img { display: block; }	
+	#logo img { display: block; max-width: 45%; }	
+
+	.footer-logo {
+		max-width: 45%;
+	}
 	
 	@media (max-width: 767px) {
 
