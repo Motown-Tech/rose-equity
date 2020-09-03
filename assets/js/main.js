@@ -224,72 +224,7 @@
    handleContactForm - validate and ajax submit contat form
    ========================================================================== */
 
-	function handleContactForm() {
 	
-		if(typeof $.fn.validate !== 'undefined'){
-			
-			$('#contact-form').validate({
-				errorClass: 'validation-error', // so that it doesn't conflict with the error class of alert boxes
-				rules: {
-					name: {
-						required: true
-					},
-					email: {
-						required: true,
-						email: true
-					},
-					subject: {
-						required: true
-					},
-					message: {
-						required: true
-					}
-				},
-				messages: {
-					name: {
-						required: "Field is required!"
-					},
-					email: {
-						required: "Field is required!",
-						email: "Please enter a valid email address"
-					},
-					subject: {
-						required: "Field is required!"
-					},
-					message: {
-						required: "Field is required!"
-					}
-				},
-				submitHandler: function(form) {
-					var result;
-					$(form).ajaxSubmit({
-						type: "POST",
-						data: $(form).serialize(),
-						url: "assets/php/send.php",
-						success: function(msg) {
-							
-							if (msg === 'OK') {
-								result = '<div class="alert success"><i class="fa fa-check-circle-o"></i>The message has been sent!</div>';
-								$('#contact-form').clearForm();
-							} else {
-								result = '<div class="alert error"><i class="fa fa-times-circle"></i>' + msg + '</div>';
-							}
-							$("#formstatus").html(result);
-		
-						},
-						error: function() {
-		
-							result = '<div class="alert error"><i class="fa fa-times-circle"></i>There was an error sending the message!</div>';
-							$("#formstatus").html(result);
-		
-						}
-					});
-				}
-			});
-			
-		}
-		
-	}
 
 
 /* ==========================================================================
@@ -949,7 +884,6 @@
 			enableParallax();
 		}
 
-		handleContactForm();
 		
 		handleMobileMenu();
 		showHideMobileMenu();
