@@ -1,6 +1,10 @@
 /* ==========================================================================
    =Typography
    ========================================================================== */
+  
+   html {
+	   height: 100%;
+   }
    	 
 	body {
 		background-color: #fff;
@@ -9,6 +13,37 @@
 		line-height: 25px;
 		font-weight: 300;
 		letter-spacing: 0.5px;
+		height: 100%;
+	}
+
+	.bg-img-cont {
+		height: 100vh;
+	}
+ 
+ 
+	.bg-img {
+		background-image: url('/assets/images/homepage-bg3.jpg');
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.rose-txt {
+		font-size: 72px;
+		color: #fff;
+		font-weight: bold;
+	}
+
+	.rose-sub-txt {
+		font-size: 38px;
+		color: #fff;
+		font-weight: bold;
+		margin-top: 3%;
 	}
 	
 	@media (max-width: 767px) {
@@ -20,6 +55,19 @@
 		body { 
 			background: none; 	/* 1 */
 			background-color: #fff; 
+		}
+
+		.rose-txt {
+			font-size: 22px;
+			color: #fff;
+			font-weight: bold;
+			margin-top: 20%;
+		}
+
+		.rose-sub-txt {
+			font-size: 16px;
+			color: #fff;
+			font-weight: bold;
 		}
 		
 	}	
